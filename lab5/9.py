@@ -1,10 +1,8 @@
 #Write a Python program to insert spaces between words starting with capital letters.
 import re
-a= open("row.txt","r",encoding ="UTF - 8 ")
-s=a.read()
-
+s=input()
 def insert(str):
-    caplet=re.sub(r"([A-Z][a-z]+)",r"\1",str)
+    caplet=re.sub(r"(\w)([A-Z])",r"\1 \2",str)
     return caplet
 
 print(insert(s))
